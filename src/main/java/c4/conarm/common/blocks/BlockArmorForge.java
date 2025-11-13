@@ -55,7 +55,7 @@ public class BlockArmorForge extends BlockTable implements ITinkerStationBlock {
     public BlockArmorForge() {
         super(Material.IRON);
         this.setCreativeTab(TinkerRegistry.tabGeneral);
-        this.setSoundType(SoundType.METAL);
+        this.setSoundType(SoundType.ANVIL);
         this.setResistance(10f);
         this.setHardness(2f);
         this.setHarvestLevel("pickaxe", 0);
