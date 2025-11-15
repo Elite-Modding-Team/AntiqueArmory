@@ -67,4 +67,6 @@ public class ArmorTraits {
     public static final AbstractArmorTrait voltaic = new TraitVoltaic();
     public static final AbstractArmorTrait bouncy = new TraitBouncy();
     public static final AbstractArmorTrait featherweight = new TraitFeatherweight();
+    public static final AbstractArmorTrait depthExplorer = new TraitDepthExplorer();
+    public static final AbstractArmorTrait desperation = new TraitDesperation();
 }

@@ -44,6 +44,8 @@ public class ArmorMaterials {
 
         //Item/Special Resources
         addArmorTrait(TinkerMaterials.bone, ArmorTraits.calcic, ArmorTraits.skeletal);
+        addArmorTrait(TinkerMaterials.bloodbone, ArmorTraits.desperation);
+        addArmorTrait(TinkerMaterials.bloodbone, ArmorTraits.calcic, ArmorTraits.skeletal);
         addArmorTrait(TinkerMaterials.paper, TinkerTraits.writable2, ArmorMaterialType.CORE);
         addArmorTrait(TinkerMaterials.sponge, ArmorTraits.absorbent);
         addArmorTrait(TinkerMaterials.firewood, ArmorTraits.combustible);
@@ -56,6 +58,8 @@ public class ArmorMaterials {
 
         //Metals
         addArmorTrait(TinkerMaterials.iron, ArmorTraits.magnetic2, ArmorTraits.magnetic);
+        addArmorTrait(TinkerMaterials.alubrass, ArmorTraits.depthExplorer);
+        addArmorTrait(TinkerMaterials.alumite, ArmorTraits.duritae);
         addArmorTrait(TinkerMaterials.pigiron, ArmorTraits.baconlicious, ArmorMaterialType.CORE);
         addArmorTrait(TinkerMaterials.pigiron, ArmorTraits.tasty);
         addArmorTrait(TinkerMaterials.cobalt, ArmorTraits.featherweight, ArmorTraits.lightweight);
@@ -108,142 +112,158 @@ public class ArmorMaterials {
 
         //Natural
         TinkerRegistry.addMaterialStats(TinkerMaterials.wood,
-                                                        new CoreMaterialStats(2.5F, 3),
-                                                        new PlatesMaterialStats(1, 1, 0),
-                                                        new TrimMaterialStats(0.5F));
+                new CoreMaterialStats(2.5F, 3),
+                new PlatesMaterialStats(1, 1, 0),
+                new TrimMaterialStats(0.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.stone,
-                                                        new CoreMaterialStats(8.7F, 5),
-                                                        new PlatesMaterialStats(0.5F, -3.5F, 0),
-                                                        new TrimMaterialStats(0.75F));
+                new CoreMaterialStats(8.7F, 5),
+                new PlatesMaterialStats(0.5F, -3.5F, 0),
+                new TrimMaterialStats(0.75F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.flint,
-                                                        new CoreMaterialStats(10, 4.5F),
-                                                        new PlatesMaterialStats(0.6F, -5, 1),
-                                                        new TrimMaterialStats(2.6F));
+                new CoreMaterialStats(10, 4.5F),
+                new PlatesMaterialStats(0.6F, -5, 1),
+                new TrimMaterialStats(2.6F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.cactus,
-                                                        new CoreMaterialStats(12.5F, 10),
-                                                        new PlatesMaterialStats(0.85F, 0.75F, 0),
-                                                        new TrimMaterialStats(3.5F));
-
-        TinkerRegistry.addMaterialStats(TinkerMaterials.bone,
-                                                        new CoreMaterialStats(12, 4),
-                                                        new PlatesMaterialStats(1.10F, 3.5F, 1),
-                                                        new TrimMaterialStats(5.3F));
+                new CoreMaterialStats(12.5F, 10),
+                new PlatesMaterialStats(0.85F, 0.75F, 0),
+                new TrimMaterialStats(3.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.obsidian,
-                                                        new CoreMaterialStats(9.5F, 16.2F),
-                                                        new PlatesMaterialStats(0.9F, -8, 3.5F),
-                                                        new TrimMaterialStats(7));
+                new CoreMaterialStats(9.5F, 16.2F),
+                new PlatesMaterialStats(0.9F, -8, 3.5F),
+                new TrimMaterialStats(7));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.prismarine,
-                                                        new CoreMaterialStats(16, 18.8F),
-                                                        new PlatesMaterialStats(0.6F, -10, 2),
-                                                        new TrimMaterialStats(8));
+                new CoreMaterialStats(16, 18.8F),
+                new PlatesMaterialStats(0.6F, -10, 2),
+                new TrimMaterialStats(8));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.endstone,
-                                                        new CoreMaterialStats(15.5F, 9),
-                                                        new PlatesMaterialStats(0.85F, 0, 1),
-                                                        new TrimMaterialStats(2.7F));
+                new CoreMaterialStats(15.5F, 9),
+                new PlatesMaterialStats(0.85F, 0, 1),
+                new TrimMaterialStats(2.7F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.paper,
-                                                        new CoreMaterialStats(0.4F, 0.5F),
-                                                        new PlatesMaterialStats(0.1F, 0.3F, 0),
-                                                        new TrimMaterialStats(0.5F));
+                new CoreMaterialStats(0.4F, 0.5F),
+                new PlatesMaterialStats(0.1F, 0.3F, 0),
+                new TrimMaterialStats(0.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.sponge,
-                                                        new CoreMaterialStats(21, 1),
-                                                        new PlatesMaterialStats(1.2F, 13, 5),
-                                                        new TrimMaterialStats(13));
+                new CoreMaterialStats(21, 1),
+                new PlatesMaterialStats(1.2F, 13, 5),
+                new TrimMaterialStats(13));
+
+        //Bone
+        TinkerRegistry.addMaterialStats(TinkerMaterials.bone,
+                new CoreMaterialStats(12, 4),
+                new PlatesMaterialStats(1.10F, 3.5F, 1),
+                new TrimMaterialStats(5.3F));
+
+        TinkerRegistry.addMaterialStats(TinkerMaterials.bloodbone,
+                new CoreMaterialStats(12, 4),
+                new PlatesMaterialStats(1.10F, 3.5F, 1),
+                new TrimMaterialStats(5.3F));
 
         //Slime
         TinkerRegistry.addMaterialStats(TinkerMaterials.slime,
-                                                        new CoreMaterialStats(20.7F, 2),
-                                                        new PlatesMaterialStats(0.7F, 0, 2),
-                                                        new TrimMaterialStats(14.5F));
+                new CoreMaterialStats(20.7F, 2),
+                new PlatesMaterialStats(0.7F, 0, 2),
+                new TrimMaterialStats(14.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.blueslime,
-                                                        new CoreMaterialStats(19.5F, 1.8F),
-                                                        new PlatesMaterialStats(1.3F, -3.5F, 2.25F),
-                                                        new TrimMaterialStats(12));
+                new CoreMaterialStats(19.5F, 1.8F),
+                new PlatesMaterialStats(1.3F, -3.5F, 2.25F),
+                new TrimMaterialStats(12));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.knightslime,
-                                                        new CoreMaterialStats(20, 17.1F),
-                                                        new PlatesMaterialStats(0.5F, 16.7F, 1),
-                                                        new TrimMaterialStats(9));
+                new CoreMaterialStats(20, 17.1F),
+                new PlatesMaterialStats(0.5F, 16.7F, 1),
+                new TrimMaterialStats(9));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.magmaslime,
-                                                        new CoreMaterialStats(18, 19.4F),
-                                                        new PlatesMaterialStats(0.85F, -12, 2.5F),
-                                                        new TrimMaterialStats(10));
+                new CoreMaterialStats(18, 19.4F),
+                new PlatesMaterialStats(0.85F, -12, 2.5F),
+                new TrimMaterialStats(10));
 
         //Nether
         TinkerRegistry.addMaterialStats(TinkerMaterials.netherrack,
-                                                        new CoreMaterialStats(13.5F, 5.3F),
-                                                        new PlatesMaterialStats(0.85F, -10, 0),
-                                                        new TrimMaterialStats(5.5F));
+                new CoreMaterialStats(13.5F, 5.3F),
+                new PlatesMaterialStats(0.85F, -10, 0),
+                new TrimMaterialStats(5.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.cobalt,
-                                                        new CoreMaterialStats(19.5F, 15.6F),
-                                                        new PlatesMaterialStats(0.9F, 8, 0),
-                                                        new TrimMaterialStats(14));
+                new CoreMaterialStats(19.5F, 15.6F),
+                new PlatesMaterialStats(0.9F, 8, 0),
+                new TrimMaterialStats(14));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.ardite,
-                                                        new CoreMaterialStats(20.5F, 13),
-                                                        new PlatesMaterialStats(1.4F, -12, 4),
-                                                        new TrimMaterialStats(16.2F));
+                new CoreMaterialStats(20.5F, 13),
+                new PlatesMaterialStats(1.4F, -12, 4),
+                new TrimMaterialStats(16.2F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.manyullyn,
-                                                        new CoreMaterialStats(19.7F, 20),
-                                                        new PlatesMaterialStats(1.0F, 13, 3),
-                                                        new TrimMaterialStats(3.5F));
+                new CoreMaterialStats(19.7F, 20),
+                new PlatesMaterialStats(1.0F, 13, 3),
+                new TrimMaterialStats(3.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.firewood,
-                                                        new CoreMaterialStats(17, 17.5F),
-                                                        new PlatesMaterialStats(1.0F, -12, 0.5F),
-                                                        new TrimMaterialStats(10));
+                new CoreMaterialStats(17, 17.5F),
+                new PlatesMaterialStats(1.0F, -12, 0.5F),
+                new TrimMaterialStats(10));
 
         //Metals
         TinkerRegistry.addMaterialStats(TinkerMaterials.iron,
-                                                        new CoreMaterialStats(12, 15),
-                                                        new PlatesMaterialStats(0.85F, 5, 0),
-                                                        new TrimMaterialStats(3.5F));
+                new CoreMaterialStats(12, 15),
+                new PlatesMaterialStats(0.85F, 5, 0),
+                new TrimMaterialStats(3.5F));
+
+        TinkerRegistry.addMaterialStats(TinkerMaterials.alubrass,
+                new CoreMaterialStats(15, 15.5F),
+                new PlatesMaterialStats(1.0F, 7, 1),
+                new TrimMaterialStats(8.5F));
+
+        TinkerRegistry.addMaterialStats(TinkerMaterials.alumite,
+                new CoreMaterialStats(18.0F, 17.0F),
+                new PlatesMaterialStats(1.0F, 0, 2.5F),
+                new TrimMaterialStats(9.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.pigiron,
-                                                        new CoreMaterialStats(15, 16.7F),
-                                                        new PlatesMaterialStats(1.2F, 0, 1),
-                                                        new TrimMaterialStats(10.5F));
+                new CoreMaterialStats(15, 16.7F),
+                new PlatesMaterialStats(1.2F, 0, 1),
+                new TrimMaterialStats(10.5F));
 
         //Mod Integration
         TinkerRegistry.addMaterialStats(TinkerMaterials.copper,
-                                                        new CoreMaterialStats(12, 8),
-                                                        new PlatesMaterialStats(1.05F, 2, 0),
-                                                        new TrimMaterialStats(8));
+                new CoreMaterialStats(12, 8),
+                new PlatesMaterialStats(1.05F, 2, 0),
+                new TrimMaterialStats(8));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.bronze,
-                                                        new CoreMaterialStats(16, 12),
-                                                        new PlatesMaterialStats(1.10F, 5.5F, 1.25F),
-                                                        new TrimMaterialStats(6.5F));
+                new CoreMaterialStats(16, 12),
+                new PlatesMaterialStats(1.10F, 5.5F, 1.25F),
+                new TrimMaterialStats(6.5F));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.lead,
-                                                        new CoreMaterialStats(16, 11),
-                                                        new PlatesMaterialStats(0.7F, -3.5F, 2),
-                                                        new TrimMaterialStats(8));
+                new CoreMaterialStats(16, 11),
+                new PlatesMaterialStats(0.7F, -3.5F, 2),
+                new TrimMaterialStats(8));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.silver,
-                                                        new CoreMaterialStats(13,17),
-                                                        new PlatesMaterialStats(0.95F, 3.5F, 2),
-                                                        new TrimMaterialStats(10));
+                new CoreMaterialStats(13, 17),
+                new PlatesMaterialStats(0.95F, 3.5F, 2),
+                new TrimMaterialStats(10));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.electrum,
-                                                        new CoreMaterialStats(3.5F, 8.1F),
-                                                        new PlatesMaterialStats(1.1F, -1, 0),
-                                                        new TrimMaterialStats(13));
+                new CoreMaterialStats(3.5F, 8.1F),
+                new PlatesMaterialStats(1.1F, -1, 0),
+                new TrimMaterialStats(13));
 
         TinkerRegistry.addMaterialStats(TinkerMaterials.steel,
-                                                        new CoreMaterialStats(17, 18.4F),
-                                                        new PlatesMaterialStats(0.9F, 10, 4.5F),
-                                                        new TrimMaterialStats(1));
+                new CoreMaterialStats(17, 18.4F),
+                new PlatesMaterialStats(0.9F, 10, 4.5F),
+                new TrimMaterialStats(1));
     }
 }
