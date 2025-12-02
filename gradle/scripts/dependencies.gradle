@@ -72,7 +72,7 @@ dependencies {
 	// implementation 'com.cleanroommc:configanytime:3.0'
 
     // Had Enough Items
-    implementation "mezz:jei:4.26.1"
+    implementation "curse.maven:had-enough-items-557549:7282920"
 
     // CraftTweaker
 	implementation "CraftTweaker2:CraftTweaker2-API:4.1.20.698"
@@ -83,7 +83,7 @@ dependencies {
     compileOnly "com.teamacronymcoders.base:base:1.12.2-3.14.0"
     compileOnly "com.teamacronymcoders:ContentTweaker:1.12.2-4.10.0"
 
-    // Tinkers' Antique
+    // Antique Suite
     implementation rfg.deobf("curse.maven:mantle-74924:2713386")
     implementation rfg.deobf("curse.maven:tinkers-antique-1242239:7242538")
     implementation rfg.deobf("curse.maven:tinkers-tool-leveling-250957:2630860")
