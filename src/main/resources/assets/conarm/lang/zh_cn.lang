@@ -22,7 +22,7 @@ conarm.general.leveling.damagetoxp.tooltip=用于计算伤害转化的经验值�
 #################
 #     Blocks    #
 #################
-tile.conarm.armorforge.name=盔甲装配台
+tile.conarm.armorforge.name=锻甲砧
 tile.conarm.armorstation.name=盔甲组装台
 tile.conarm.soft_obsidian.name=不稳定黑曜石
 
@@ -73,11 +73,11 @@ item.conarm.frosty_soles.tooltip=提供冰霜能力
 #################
 #      GUI      #
 #################
-gui.armorforge.name=盔甲装配台
+gui.armorforge.name=锻甲砧
 gui.armorstation.name=盔甲组装台
 gui.armorstation.preview=预览
 
-gui.error.modifier_on_station=请使用盔甲装配台进行强化。
+gui.error.modifier_on_station=请使用锻甲砧进行强化。
 
 #################
 #     Armor     #
@@ -305,3 +305,4 @@ stat.plates.toughness.desc=护甲韧性的基础数值。
 stat.trim.name=夹板
 stat.trim.durability.name=stat.core.durability.name
 stat.trim.durability.desc=护甲的总耐久度将会被乘以这个系数。
+
