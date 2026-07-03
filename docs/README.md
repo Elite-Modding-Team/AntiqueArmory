@@ -18,6 +18,8 @@ This book will have information about the new tinkering tables you'll need, the 
 
 # Mod Integration
 
+- [ContentTweaker](https://www.curseforge.com/minecraft/mc-mods/contenttweaker) - Allows modpack makers using CraftTweaker + ContentTweaker to create new armor traits and armor materials. You can read more about it [here](https://github.com/illusivesoulworks/constructsarmory/wiki/ContentTweaker).
+- [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker) - Allows modpack makers using CraftTweaker to adjust materials. You can read more about it [here](https://github.com/illusivesoulworks/constructsarmory/wiki/CraftTweaker).
 - [Tinkers' Tool Leveling](https://www.curseforge.com/minecraft/mc-mods/tinkers-tool-leveling) - Armor will have the ability to level up and gain experience like tools can.
 
 # Credits
