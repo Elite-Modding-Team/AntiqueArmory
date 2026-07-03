@@ -25,6 +25,8 @@ import crafttweaker.annotations.ModOnly;
 import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.item.IIngredient;
 import crafttweaker.api.item.IItemStack;
+import crafttweaker.api.minecraft.CraftTweakerMC;
+import slimeknights.mantle.util.RecipeMatch;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import stanhebben.zenscript.annotations.Optional;
 import stanhebben.zenscript.annotations.ZenClass;
@@ -102,6 +104,8 @@ public class CoTArmorTraitBuilder {
 
     private List<CoTRecipeMatch> recipeMatches = new ArrayList<>();
 
+    private final List<RecipeMatch> recipes = new ArrayList<>();
+
     public CoTArmorTraitBuilder(String identifier) {
         this.identifier = identifier;
     }
@@ -114,6 +118,11 @@ public class CoTArmorTraitBuilder {
     @ZenMethod
     public void addItem(IIngredient ingredient, @Optional(valueLong = 1) int amountNeeded, @Optional(valueLong = 1) int amountMatched) {
         recipeMatches.add(new CoTRecipeMatch(ingredient, amountMatched, amountNeeded));
+    }
+
+    @ZenMethod
+    public void addMultiItem(int amount, IItemStack... items) {
+        recipes.add(new RecipeMatch.ItemCombination(amount, CraftTweakerMC.getItemStacks(items)));
     }
 
     @ZenMethod
@@ -149,6 +158,10 @@ public class CoTArmorTraitBuilder {
         trait.localizedDescription = this.localizedDescription;
 
         for (CoTRecipeMatch recipeMatch : recipeMatches) {
+            trait.addItem(recipeMatch);
+        }
+
+        for (RecipeMatch recipeMatch : recipes) {
             trait.addItem(recipeMatch);
         }
 
